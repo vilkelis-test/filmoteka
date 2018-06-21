@@ -34,7 +34,7 @@ if (array_key_exists('add-film', $_POST)) {
 		{
 			$query = "insert into films (title, genre, year) values (
 			'".mysqli_real_escape_string($link, $_POST['title'])."',
-			'".mysqli_real_escape_string($link, $_POST['title'])."',
+			'".mysqli_real_escape_string($link, $_POST['genre'])."',
 			".mysqli_real_escape_string($link, $_POST['year']).")";
 
 			if ($result = mysqli_query($link, $query)) {
