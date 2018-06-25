@@ -689,7 +689,8 @@ a.button--login:active {
   transition: -webkit-box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
-  height: 200px;
+  height: 100px;
+  margin-bottom: 20px;
   resize: vertical;
 }
 .textarea:active,
@@ -828,8 +829,6 @@ label:last-child {
 .img-post-uploaded {
   position: relative;
   display: block;
-  width: 260px;
-  height: 140px;
   margin-top: 20px;
 }
 .img-post-uploaded .button--delete {
@@ -1328,7 +1327,7 @@ a.title,
   margin-left: 100px;
 }
 .header__nav-link {
-  color: #FFF;
+  color: #037EC6;
   margin-right: 50px;
   font-size: 18px;
   text-decoration: underline;
@@ -2077,4 +2076,36 @@ a.button--edit:hover,
 {
   color:#FFFFFF;
   text-decoration: none;
+}
+
+.img-post-uploaded__img{
+  max-width: 400px;
+}
+
+.img-on-list{
+  min-width: 137px;
+}
+
+.img-on-list__nophoto{
+  width: 137px;
+  height: 130px;
+  border-width: 1px;
+  border-color: #dde8ee;
+  border-style: solid;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #dde8ee;
+  text-align: center;
+}
+
+.img-edit__nophoto{
+  width: 260px;
+  height: 120px;
+  border-width: 1px;
+  border-color: #dde8ee;
+  border-style: solid;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #dde8ee;
+  text-align: center;
 }
