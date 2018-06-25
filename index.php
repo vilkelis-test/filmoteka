@@ -14,7 +14,7 @@ include('delete.php');
 $films = films_all($link);
 
 
-
+$active_page = "index.php";
 $pageTitle = 'Фильмотека';
 include('views/head.tpl');
 include('views/notifications.tpl');

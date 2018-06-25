@@ -23,4 +23,24 @@
 	</div>
 </div>
 
+<div class="mb-20">
+	<label class="label-title">Описание фильма</label>
+	<textarea class="textarea" placeholder="Очень интересный фильм" name="description" ><?=@$film['description']?></textarea> 
+</div>
+<div class="mb-20">
+    <label class="label-title">Изображение</label>
+    <p>Изображение jpg или png, рекомендуемая ширина 400px и больше, высота от 600px и более, вес до 10Мб.</p>
+    <input class="inputfile" type="file" name="photo" id="file-2" >
+    <label for="file-2">Выбрать файл</label><span class="needed"></span>
+    <div class="img-post-uploaded mb-25">
+		<?php 
+		 if ( @$film['photo_file'] != '')	
+		 { ?> 
+    	<img class="img-post-uploaded__img" src="<?=HOST . 'data/films/full/' . $film['photo_file']?>">
+		<?php 
+		 } else { ?>
+        <div class="img-edit__nophoto"></div>
+		 <?php } ?>
+    </div>
+</div>
 	

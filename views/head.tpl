@@ -21,6 +21,15 @@
   <body>
     <div class="container user-content pt-35">
       <div class="header__nav ml-0 mb-30"> 
-        <a class="header__nav-link" href="index.php">Все фильмы</a>
-        <a class="header__nav-link" href="new.php">Добавить фильм</a>
+        <?php if ( @$active_page == "index.php") { ?>
+          <span class="header__nav-link header__nav-link--active">Все фильмы</span>
+        <?php }else{  ?>
+          <a class="header__nav-link" href="index.php">Все фильмы</a>
+        <?php } ?>
+
+        <?php if ( @$active_page == "new.php") { ?> 
+         <span class="header__nav-link header__nav-link--active">Добавить фильм</span>
+        <?php }else{  ?>
+          <a class="header__nav-link" href="new.php">Добавить фильм</a>
+        <?php } ?>
       </div>
