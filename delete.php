@@ -1,6 +1,13 @@
 <?php
 
+
 if (array_key_exists('action', $_GET) and $_GET['action'] == 'delete') {
+
+	if (!isAdmin())
+	{	
+	    header('Location: ' . HOST . 'admin-error.php');
+	    return false;
+	}
 	
 	if ( film_delete($link, $_GET['id']) ) {
 

@@ -3,6 +3,7 @@
 require('config.php');
 require('database.php');
 require('models/films.php');
+require('functions/session_tools.php');
 
 $actionResult = array();
 $addErrors = array();
@@ -18,6 +19,7 @@ $active_page = "one.php";
 $pageTitle = 'Просмотр фильма';
 include('views/head.tpl');
 include('views/notifications.tpl');
+
 if ( array_key_exists('id', $film) )
 {
 	include('views/film-one.tpl');

@@ -3,6 +3,13 @@
 require('config.php');
 require('database.php');
 require('models/films.php');
+require('functions/session_tools.php');
+
+if (!isAdmin())
+{	
+    header('Location: ' . HOST . 'admin-error.php');
+    return false;
+}
 
 $actionResult = array();
 $addErrors = array();
