@@ -26,7 +26,13 @@
         <?php }else{  ?>
           <a class="header__nav-link" href="index.php">Все фильмы</a>
         <?php } ?>
-        
+   
+        <?php if ( @$active_page == "history.php") { ?>
+          <span class="header__nav-link header__nav-link--active">История</span>
+        <?php }else{  ?>
+          <a class="header__nav-link" href="history.php">История</a>
+        <?php } ?>
+
         <?php 
         if ( isAdmin() ) {
                 if ( @$active_page == "new.php") { ?> 

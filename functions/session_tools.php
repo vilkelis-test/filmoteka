@@ -16,4 +16,5 @@ function isAdmin(){
 	return $result;
 }
 
+
 ?>

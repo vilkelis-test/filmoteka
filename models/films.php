@@ -19,7 +19,7 @@ function films_all($link){
 
 function film_one($link, $id)
 {
-	$query = "select * from films where id = ".mysqli_real_escape_string($link, $_GET['id'])." LIMIT 1";
+	$query = "select * from films where id = ".mysqli_real_escape_string($link,  $id)." LIMIT 1";
 
 	$result = mysqli_query($link, $query);
 
