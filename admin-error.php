@@ -5,22 +5,16 @@ require('database.php');
 require('models/films.php');
 require('functions/session_tools.php');
 
+
 $actionResult = array();
+$addErrors = array();
 
+$actionResult['error'] = 'Необходимы права администратора.';
 
-$link = db_connect();
-
-include('delete.php');
-
-$films = films_all($link);
-
-
-$active_page = "index.php";
-$pageTitle = 'Фильмотека';
+$active_page = "admin-error.php";
+$pageTitle = 'Ошибка доступа';
 include('views/head.tpl');
 include('views/notifications.tpl');
-include('views/index.tpl');
 include('views/footer.tpl');
 
 ?>
-

@@ -26,10 +26,41 @@
         <?php }else{  ?>
           <a class="header__nav-link" href="index.php">Все фильмы</a>
         <?php } ?>
-
-        <?php if ( @$active_page == "new.php") { ?> 
-         <span class="header__nav-link header__nav-link--active">Добавить фильм</span>
+   
+        <?php if ( @$active_page == "history.php") { ?>
+          <span class="header__nav-link header__nav-link--active">История</span>
         <?php }else{  ?>
-          <a class="header__nav-link" href="new.php">Добавить фильм</a>
+          <a class="header__nav-link" href="history.php">История</a>
         <?php } ?>
+
+        <?php 
+        if ( isAdmin() ) {
+                if ( @$active_page == "new.php") { ?> 
+           <span class="header__nav-link header__nav-link--active">Добавить фильм</span>
+          <?php }else{  ?>
+            <a class="header__nav-link" href="new.php">Добавить фильм</a>
+          <?php }  
+         } ?>
+
+
+          <?php 
+          if ( !isAdmin() ) {
+               if ( @$active_page == "login.php") { ?> 
+           <span class="header__nav-link header__nav-link--active">Вход админ.</span>
+          <?php }else{  ?>
+            <a class="header__nav-link" href="login.php">Вход админ.</a>
+          <?php } 
+           } ?>
+
+
+
+          <?php 
+          if ( isAdmin() ) {
+               if ( @$active_page == "logout.php") { ?> 
+           <span class="header__nav-link header__nav-link--active">Выход</span>
+          <?php }else{  ?>
+            <a class="header__nav-link" href="logout.php">Выход</a>
+          <?php } 
+           } ?>
+
       </div>
